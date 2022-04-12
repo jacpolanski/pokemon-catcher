@@ -1,5 +1,5 @@
-import { Card } from "react-bootstrap";
+import Login from "../components/Login";
 
 export default function Home() {
-  return <Card className="login">coś</Card>;
+  return <Login />;
 }

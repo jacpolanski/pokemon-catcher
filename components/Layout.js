@@ -13,12 +13,15 @@ export const Layout = ({ children }) => {
         />
         <link rel="icon" href="./favicon.ico" />
       </Head>
-
-      <header></header>
-      <main>
-        <Container>{children}</Container>
-      </main>
-      <footer></footer>
+      <div className="background">
+        <header></header>
+        <main>
+          <Container className="d-flex justify-content-center align-items-center main">
+            {children}
+          </Container>
+        </main>
+        <footer></footer>
+      </div>
     </>
   );
 };

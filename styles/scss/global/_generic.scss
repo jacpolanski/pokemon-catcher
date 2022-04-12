@@ -4,25 +4,46 @@
   box-sizing: border-box;
 }
 
-html {
-  background: radial-gradient(circle at bottom right, transparent 19%, $color-dark 24%, $color-dark 25%, transparent 24%, transparent 100%),
-              radial-gradient(circle at bottom left,  transparent 19%, $color-dark 24%, $color-dark 25%, transparent 26%),
-              radial-gradient(circle at top right,    transparent 19%, $color-dark 24%, $color-dark 25%, transparent 24%, transparent 100%),
-              radial-gradient(circle at top left,     transparent 19%, $color-dark 24%, $color-dark 25%, transparent 26%),
-              radial-gradient(circle at bottom right, $color-red 25%, transparent 26%),
-              radial-gradient(circle at bottom left, $color-red 25%, transparent 26%);
-  background-size: 2em 2em;
-  opacity: 0.3;
-}
-
 body {
   color: $color-dark;
   font-family: $font-base;
   font-weight: 400;
   font-size: $main-font-size;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10000;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    background:
+    linear-gradient(90deg, transparent 35.5%, $color-mask 25%, $color-mask 64.5%, $color-mask 50%, transparent 60%),
+    linear-gradient(180deg, $color-dark 0, $color-dark 3%, transparent 0, transparent 100%),
+    radial-gradient(circle at bottom left, $color-dark 4%, transparent 2%, transparent 5%, $color-dark 8%, transparent 8%),
+    radial-gradient(circle at bottom right, $color-dark 4%, transparent 2%, transparent 5%, $color-dark 8%, transparent 8%),
+    radial-gradient(circle at top left, $color-dark 4%, transparent 2%, transparent 5%, $color-dark 8%, transparent 8%),
+    radial-gradient(circle at top right, $color-dark 4%, transparent 2%, transparent 5%, $color-dark 8%, transparent 8%),
+    radial-gradient(circle at bottom right, transparent 19%, $color-dark 24%, $color-dark 25%, transparent 24%, transparent 100%),
+    radial-gradient(circle at bottom left, transparent 19%, $color-dark 24%, $color-dark 25%, transparent 24%),
+    radial-gradient(circle at top right, transparent 19%, $color-dark 24%, $color-dark 25%, transparent 24%, transparent 100%),
+    radial-gradient(circle at top left, transparent 19%, $color-dark 24%, $color-dark 25%, transparent 24%),
+    radial-gradient(circle at bottom right, $color-red 20%, transparent 26%),
+    radial-gradient(circle at bottom left, $color-red 20%, transparent 26%),
+    radial-gradient(circle at bottom left, #4f46e5 10%, transparent 11%);
+    background-size: 2.5em 2.5em;
+    opacity: 0.4;
+  }
 
   a {
     text-decoration: none;
     color: inherit;
   }
+
+  .main {
+    height: $main-tag-height;
+  }
 }
+

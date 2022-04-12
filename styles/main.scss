@@ -4,7 +4,11 @@
 //Colors
 @import "./scss/settings/colors";
 
+//Variables
+@import "./scss/settings/heights";
+
 //Global settings
 @import "./scss/global/generic";
 
 //Components
+@import "./scss/components/login";
