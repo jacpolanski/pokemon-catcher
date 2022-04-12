@@ -20,7 +20,7 @@ export const Layout = ({ children }) => {
       <div className="background">
         <header></header>
         <main>
-          <Container className="d-flex justify-content-center align-items-center main">
+          <Container className="d-flex flex-column justify-content-center align-items-center main">
             {children}
           </Container>
         </main>

@@ -28,37 +28,44 @@ function Login() {
   };
 
   return (
-    <Card className="login col-md-9 col-12 p-4 justify-content-center align-items-center">
-      <Card.Img
-        variant="top"
-        src="./pikachu.svg"
-        className="pikachu px-3 m-3"
+    <>
+      <img
+        src="/pokemon_logo.svg"
+        className="login-logo m-5"
+        alt="pokemon logo"
       />
-      <Card.Body className="text-center d-flex justify-content-center align-items-between flex-column">
-        <Card.Title className="login-title">Welcome to</Card.Title>
-        <Card.Title className="login-title fs-4">Pokémon Cather</Card.Title>
-        <Card.Text className="my-3">
-          Get your own Pokédex, explore new kinds and catch them all!!
-        </Card.Text>
-        <Form onSubmit={(e) => handleSubmit(e)}>
-          <Form.Group className="mb-3" controlId="trainerName">
-            <Form.Label>Tell me your name Trainer!</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Ash Ketchum"
-              name="trainerName"
-              value={trainerName}
-              onChange={(e) => handleChange(e)}
-              className="w-75 mx-auto text-center"
-            />
-            <div className="fs-7 text-danger">{error}</div>
-          </Form.Group>
-          <Button type="submit" className="login-button">
-            Continue
-          </Button>
-        </Form>
-      </Card.Body>
-    </Card>
+      <Card className="login col-md-9 col-12 p-4 justify-content-center align-items-center">
+        <Card.Img
+          variant="top"
+          src="./pikachu.svg"
+          className="pikachu px-3 m-3"
+        />
+        <Card.Body className="text-center d-flex justify-content-center align-items-between flex-column">
+          <Card.Title className="login-title">Welcome to</Card.Title>
+          <Card.Title className="login-title fs-4">Pokémon Cather</Card.Title>
+          <Card.Text className="my-3">
+            Get your own Pokédex, explore new kinds and catch them all!!
+          </Card.Text>
+          <Form onSubmit={(e) => handleSubmit(e)}>
+            <Form.Group className="mb-3" controlId="trainerName">
+              <Form.Label>Tell me your name Trainer!</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Ash Ketchum"
+                name="trainerName"
+                value={trainerName}
+                onChange={(e) => handleChange(e)}
+                className="w-75 mx-auto text-center"
+              />
+              <div className="fs-7 text-danger">{error}</div>
+            </Form.Group>
+            <Button type="submit" className="login-button">
+              Continue
+            </Button>
+          </Form>
+        </Card.Body>
+      </Card>
+    </>
   );
 }
 

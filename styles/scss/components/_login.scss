@@ -1,15 +1,13 @@
 .login {
   background: $background-cards;
 
-
   .pikachu {
     width: calc(100% / 3);
     min-width: 300px;
     border-bottom: 3px solid $color-brown;
+  }
 
-    }
-
-  .login-title{
+  .login-title {
     font-family: $font-alt;
   }
 
@@ -17,4 +15,9 @@
     background-color: $color-pikachu;
     color: inherit;
   }
+}
+
+.login-logo {
+  width: 100%;
+  max-width: 500px;
 }
