@@ -9,12 +9,13 @@ export function usePoke() {
 export function PokeProvider({ children }) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [offset, setOffset] = useState(5);
+  const [offset, setOffset] = useState();
+  const [isLogged, setIsLogged] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
     let pokesDataAll = [];
-    data.length === 0 &&
+    offset &&
       fetch(`https://pokeapi.co/api/v2/pokemon?limit=5&offset=${offset}`)
         .then((response) => response.json())
         .then(function (data) {
@@ -37,22 +38,20 @@ export function PokeProvider({ children }) {
                     []
                   ),
                 });
-                setData(pokesDataAll);
-              });
+              })
+              .then(() => setData(pokesDataAll));
           });
         });
     setIsLoading(false);
-    // console.log(`pokesDataAll: ${pokesDataAll}`);
-    //
-    // setData(pokesDataAll);
-  }, []);
-
-  useEffect(() => {
-    console.log(`data: ${data}`);
-  }, [isLoading]);
+  }, [offset]);
 
   const value = {
-    // isLoading,
+    isLoading,
+    data,
+    offset,
+    setOffset,
+    isLogged,
+    setIsLogged,
   };
   return <PokeContext.Provider value={value}>{children}</PokeContext.Provider>;
 }

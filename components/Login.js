@@ -1,8 +1,58 @@
-import React from "react";
-import { Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Card, Form } from "react-bootstrap";
+import { usePoke } from "./context/pokeContext";
 
 function Login() {
-  return <Card className="login col-md-9 col-12">text</Card>;
+  const { setOffset, setIsLogged } = usePoke();
+  const [trainerName, setTrainerName] = useState("");
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setTrainerName(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    let minChars = 2;
+    e.preventDefault();
+    if (trainerName.length === 0) {
+      setError("Name can not be empty");
+    } else if (trainerName.length > 0 && trainerName.length <= minChars) {
+      setError(`Name should contain more than ${minChars} characters`);
+    } else {
+      setOffset(trainerName.length * 10);
+      setIsLogged(true);
+    }
+  };
+
+  return (
+    <Card className="login col-md-9 col-12 p-4 justify-content-center align-items-center">
+      <Card.Img variant="top" src="./pikachu.svg" className="pikachu px-3" />
+      <Card.Body className="text-center">
+        <Card.Title className="login-title">Welcome to</Card.Title>
+        <Card.Title className="login-title fs-4">Pokémon Cather</Card.Title>
+        <Card.Text className="my-3">
+          Get your own Pokédex, explore new kinds and catch them all!!
+        </Card.Text>
+        <Form onSubmit={(e) => handleSubmit(e)}>
+          <Form.Group className="mb-3" controlId="trainerName">
+            <Form.Label>Tell me your name Trainer!</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Ash Ketchum"
+              name="trainerName"
+              value={trainerName}
+              onChange={(e) => handleChange(e)}
+              className="w-75 mx-auto text-center"
+            />
+            <div className="fs-7 text-danger">{error}</div>
+          </Form.Group>
+          <Button type="submit" className="login-button">
+            Continue
+          </Button>
+        </Form>
+      </Card.Body>
+    </Card>
+  );
 }
 
 export default Login;

@@ -1,4 +1,20 @@
 .login {
-  height: 50vh;
-  background-image: $background-gradient;
+  height: 60vh;
+  background: $background-cards;
+
+  .pikachu {
+    width: calc(100% / 3);
+    min-width: 300px;
+    border-bottom: 3px solid $color-brown;
+
+    }
+
+  .login-title{
+    font-family: $font-alt;
+  }
+
+  .login-button {
+    background-color: $color-pikachu;
+    color: inherit;
+  }
 }
