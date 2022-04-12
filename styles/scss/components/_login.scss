@@ -1,15 +1,5 @@
 .login {
-  height: 75vh;
   background: $background-cards;
-
-  @include tablet-min {
-    height: 65vh;
-  }
-
-  @include tablet-max {
-    height: 60vh;
-  }
-
 
 
   .pikachu {
