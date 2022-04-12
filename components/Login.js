@@ -14,9 +14,12 @@ function Login() {
   const handleSubmit = (e) => {
     let minChars = 2;
     e.preventDefault();
-    if (trainerName.length === 0) {
+    if (trainerName.toString().length === 0) {
       setError("Name can not be empty");
-    } else if (trainerName.length > 0 && trainerName.length <= minChars) {
+    } else if (
+      trainerName.toString().length > 0 &&
+      trainerName.toString().length <= minChars
+    ) {
       setError(`Name should contain more than ${minChars} characters`);
     } else {
       setOffset(trainerName.length * 10);
