@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: radial-gradient(circle at bottom right, transparent 19%, $color-dark 24%, $color-dark 25%, transparent 24%, transparent 100%),
+              radial-gradient(circle at bottom left,  transparent 19%, $color-dark 24%, $color-dark 25%, transparent 26%),
+              radial-gradient(circle at top right,    transparent 19%, $color-dark 24%, $color-dark 25%, transparent 24%, transparent 100%),
+              radial-gradient(circle at top left,     transparent 19%, $color-dark 24%, $color-dark 25%, transparent 26%),
+              radial-gradient(circle at bottom right, $color-red 25%, transparent 26%),
+              radial-gradient(circle at bottom left, $color-red 25%, transparent 26%);
+  background-size: 2em 2em;
+  opacity: 0.3;
+}
+
+body {
+  color: $color-dark;
+  font-family: $font-base;
+  font-weight: 400;
+  font-size: $main-font-size;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
