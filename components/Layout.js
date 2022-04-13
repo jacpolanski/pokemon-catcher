@@ -18,7 +18,7 @@ export const Layout = ({ children }) => {
         <link rel="icon" href="./favicon.ico" />
       </Head>
       <main>
-        <Container className="d-flex flex-column justify-content-center align-items-center wrapper">
+        <Container className="text-center wrapper">
           <img
             src="/pokemon_logo.svg"
             className="login-logo m-2"

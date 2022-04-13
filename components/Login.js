@@ -28,7 +28,7 @@ function Login() {
 
   return (
     <>
-      <Card className="login p-4 col-lg-9 col-12 justify-content-center align-items-center">
+      <Card className="login mx-auto  p-4 col-lg-9 col-12 justify-content-center align-items-center">
         <Card.Img
           variant="top"
           src="./pikachu.svg"

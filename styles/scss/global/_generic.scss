@@ -10,7 +10,6 @@ body {
   font-weight: 400;
   font-size: $main-font-size;
 
-
   position: relative;
 
   &:before {
@@ -18,9 +17,8 @@ body {
     top: 0;
     left: 0;
     z-index: -10000;
-    width: 100vw;
-    height: 100vh;
-    max-height: 150vh;
+    width: 100%;
+    height: 100%;
     content: "";
     background:
     linear-gradient(90deg, transparent 35.5%, $color-mask 25%, $color-mask 64.5%, $color-mask 50%, transparent 60%),

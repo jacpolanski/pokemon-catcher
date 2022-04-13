@@ -18,7 +18,7 @@ function MainPage() {
 
   return (
     <>
-      <Card className="main col-lg-9 col-12 p-1 p-md-4 justify-content-center align-items-center position-relative">
+      <Card className="main mx-auto col-lg-9 col-12 p-1 p-md-4 justify-content-center align-items-center position-relative">
         <Card.Img
           variant="top"
           src="./ash.png"
