@@ -17,20 +17,16 @@ export const Layout = ({ children }) => {
         />
         <link rel="icon" href="./favicon.ico" />
       </Head>
-      <div className="background">
-        <header></header>
-        <main>
-          <Container className="d-flex flex-column justify-content-center align-items-center wrapper">
-            <img
-              src="/pokemon_logo.svg"
-              className="login-logo m-2"
-              alt="pokemon logo"
-            />
-            {children}
-          </Container>
-        </main>
-        <footer></footer>
-      </div>
+      <main>
+        <Container className="d-flex flex-column justify-content-center align-items-center wrapper">
+          <img
+            src="/pokemon_logo.svg"
+            className="login-logo m-2"
+            alt="pokemon logo"
+          />
+          {children}
+        </Container>
+      </main>
     </>
   );
 };

@@ -28,13 +28,13 @@ function Login() {
 
   return (
     <>
-      <Card className="login col-md-9 col-12 p-4 justify-content-center align-items-center">
+      <Card className="login p-4 col-lg-9 col-12 justify-content-center align-items-center">
         <Card.Img
           variant="top"
           src="./pikachu.svg"
           className="pikachu px-3 m-3"
         />
-        <Card.Body className="text-center d-flex justify-content-center align-items-between flex-column">
+        <Card.Body className="text-center col-lg-9 col-12 d-flex justify-content-center align-items-between flex-column">
           <Card.Title className="login-title">Welcome to</Card.Title>
           <Card.Title className="login-title fs-4">Pokémon Cather</Card.Title>
           <Card.Text className="my-3">

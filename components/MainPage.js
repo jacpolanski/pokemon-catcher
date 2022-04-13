@@ -17,38 +17,44 @@ function MainPage() {
   }, [update, data, setIsLoading]);
 
   return (
-    <Card className="main col-md-9 col-12 p-4 justify-content-center align-items-center position-relative">
-      <Card.Img variant="top" src="./ash.png" className="ash " />
-      <Card.Body className="text-center">
-        <Card.Title className="main-title">
-          Hello {trainerName}, look...
-        </Card.Title>
-        <Card.Text className="my-3 main-text">
-          There they are!!! Try to catch&apos;em all. Fast!!
-        </Card.Text>
-      </Card.Body>
-      <div className="d-flex flex-row justify-content-center align-items-center flex-wrap">
-        {!isLoading ? (
-          data.map((pokemon) => (
-            <Card key={uniqid()}>
-              <Card.Img
-                variant="top"
-                src={pokemon.artwork}
-                className="pokemon"
-              />
-              <Card.Body>
-                <Card.Text className="text-center">
-                  {pokemon.name.toUpperCase().replace("-", " ")}
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          ))
-        ) : (
-          <p>Loading...</p>
-        )}
-      </div>
-      <Button className="m-3 main-button">Catch&apos;em!</Button>
-    </Card>
+    <>
+      <Card className="main col-lg-9 col-12 p-1 p-md-4 justify-content-center align-items-center position-relative">
+        <Card.Img
+          variant="top"
+          src="./ash.png"
+          className="ash d-none d-lg-block"
+        />
+        <Card.Body className="main-body text-center col-12">
+          <Card.Title className="main-title">
+            Hello {trainerName}, look...
+          </Card.Title>
+          <Card.Text className="my-3 main-text">
+            There they are!!! Try to catch&apos;em all. Fast!!
+          </Card.Text>
+          <div className="d-flex justify-content-center align-items-center flex-wrap flex-lg-nowrap">
+            {!isLoading ? (
+              data.map((pokemon) => (
+                <Card key={uniqid()} className="pokeCard">
+                  <Card.Img
+                    variant="top"
+                    src={pokemon.artwork}
+                    className="pokeCard-image"
+                  />
+                  <Card.Body>
+                    <div className="text-center">
+                      {pokemon.name.toUpperCase().replace("-", " ")}
+                    </div>
+                  </Card.Body>
+                </Card>
+              ))
+            ) : (
+              <p>Loading...</p>
+            )}
+          </div>
+        </Card.Body>
+        <Button className="m-3 main-button">Catch&apos;em!</Button>
+      </Card>
+    </>
   );
 }
 
