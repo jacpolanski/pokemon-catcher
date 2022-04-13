@@ -51,8 +51,8 @@ function MainPage() {
               <p>Loading...</p>
             )}
           </div>
+          <Button className="m-3 main-button">Catch&apos;em!</Button>
         </Card.Body>
-        <Button className="m-3 main-button">Catch&apos;em!</Button>
       </Card>
     </>
   );
