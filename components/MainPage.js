@@ -7,15 +7,6 @@ function MainPage() {
   const { data, isLoading, setIsLoading, trainerName } = usePoke();
   const [update, setUpdate] = useState(0);
 
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   if (data.length < 5) {
-  //     setUpdate((prevState) => prevState + 1);
-  //   } else {
-  //     setIsLoading(false);
-  //   }
-  // }, []);
-
   useEffect(() => {
     setIsLoading(true);
     if (data.length < 5) {
@@ -33,7 +24,7 @@ function MainPage() {
           Hello {trainerName}, look...
         </Card.Title>
         <Card.Text className="my-3 main-text">
-          There they are!!! Try to catch'em all. Fast!!
+          There they are!!! Try to catch&apos;em all. Fast!!
         </Card.Text>
       </Card.Body>
       <div className="d-flex flex-row justify-content-center align-items-center flex-wrap">
@@ -56,7 +47,7 @@ function MainPage() {
           <p>Loading...</p>
         )}
       </div>
-      <Button className="m-3 main-button">Catch'em!</Button>
+      <Button className="m-3 main-button">Catch&apos;em!</Button>
     </Card>
   );
 }
