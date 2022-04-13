@@ -6,6 +6,7 @@ import uniqid from "uniqid";
 function MainPage() {
   const { data, isLoading, setIsLoading, trainerName } = usePoke();
   const [update, setUpdate] = useState(0);
+  const [trainer, setTrainer] = useState({});
 
   useEffect(() => {
     setIsLoading(true);
@@ -15,6 +16,21 @@ function MainPage() {
       setIsLoading(false);
     }
   }, [update, data, setIsLoading]);
+
+  const catchPokemons = (pokemonData, catchProbability) =>
+    pokemonData.filter(() => Math.random() < catchProbability);
+
+  const handleCatch = () => {
+    let catchProbability = 0.5;
+    setTrainer({
+      nickname: trainerName,
+      pokemons: catchPokemons(data, catchProbability),
+    });
+  };
+
+  useEffect(() => {
+    console.log(trainer);
+  }, [trainer]);
 
   return (
     <>
@@ -29,7 +45,7 @@ function MainPage() {
             Hello {trainerName}, look...
           </Card.Title>
           <Card.Text className="my-3 main-text">
-            There they are!!! Try to catch&apos;em all. Fast!!
+            There they are!!! Try to catch&apos;em all. Hurry up!!
           </Card.Text>
           <div className="d-flex justify-content-center align-items-center flex-wrap flex-lg-nowrap">
             {!isLoading ? (
@@ -51,7 +67,9 @@ function MainPage() {
               <p>Loading...</p>
             )}
           </div>
-          <Button className="m-3 main-button">Catch&apos;em!</Button>
+          <Button className="m-3 main-button" onClick={handleCatch}>
+            Catch&apos;em!
+          </Button>
         </Card.Body>
       </Card>
     </>
