@@ -7,14 +7,14 @@ function MainPage() {
   const { data, isLoading, setIsLoading, trainerName } = usePoke();
   const [update, setUpdate] = useState(0);
 
-  useEffect(() => {
-    setIsLoading(true);
-    if (data.length < 5) {
-      setUpdate((prevState) => prevState + 1);
-    } else {
-      setIsLoading(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   if (data.length < 5) {
+  //     setUpdate((prevState) => prevState + 1);
+  //   } else {
+  //     setIsLoading(false);
+  //   }
+  // }, []);
 
   useEffect(() => {
     setIsLoading(true);
@@ -23,7 +23,7 @@ function MainPage() {
     } else {
       setIsLoading(false);
     }
-  }, [update]);
+  }, [update, data, setIsLoading]);
 
   return (
     <Card className="main col-md-9 col-12 p-4 justify-content-center align-items-center position-relative">
