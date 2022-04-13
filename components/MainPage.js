@@ -6,7 +6,7 @@ import uniqid from "uniqid";
 function MainPage() {
   const { data, isLoading, setIsLoading, trainerName } = usePoke();
   const [update, setUpdate] = useState(0);
-  const [trainer, setTrainer] = useState({});
+  const [trainer, setTrainer] = useState();
 
   useEffect(() => {
     setIsLoading(true);
@@ -29,7 +29,7 @@ function MainPage() {
   };
 
   useEffect(() => {
-    console.log(trainer);
+    trainer && console.log(trainer);
   }, [trainer]);
 
   return (
