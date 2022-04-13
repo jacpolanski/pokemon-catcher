@@ -7,11 +7,11 @@
     border-bottom: 3px solid $color-brown;
   }
 
-  .login-title {
+  &-title {
     font-family: $font-alt;
   }
 
-  .login-button {
+  &-button {
     background-color: $color-pikachu;
     color: inherit;
   }

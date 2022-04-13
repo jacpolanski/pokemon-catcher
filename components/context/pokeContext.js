@@ -11,6 +11,7 @@ export function PokeProvider({ children }) {
   const [isLoading, setIsLoading] = useState(false);
   const [offset, setOffset] = useState();
   const [isLogged, setIsLogged] = useState(false);
+  const [trainerName, setTrainerName] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
@@ -47,11 +48,14 @@ export function PokeProvider({ children }) {
 
   const value = {
     isLoading,
+    setIsLoading,
     data,
     offset,
     setOffset,
     isLogged,
     setIsLogged,
+    trainerName,
+    setTrainerName,
   };
   return <PokeContext.Provider value={value}>{children}</PokeContext.Provider>;
 }

@@ -42,8 +42,13 @@ body {
     color: inherit;
   }
 
-  .main {
+  .wrapper {
     height: $main-tag-height;
+  }
+
+  .login-logo {
+    width: 100%;
+    max-width: 500px;
   }
 }
 

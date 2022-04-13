@@ -20,7 +20,12 @@ export const Layout = ({ children }) => {
       <div className="background">
         <header></header>
         <main>
-          <Container className="d-flex flex-column justify-content-center align-items-center main">
+          <Container className="d-flex flex-column justify-content-center align-items-center wrapper">
+            <img
+              src="/pokemon_logo.svg"
+              className="login-logo m-2"
+              alt="pokemon logo"
+            />
             {children}
           </Container>
         </main>

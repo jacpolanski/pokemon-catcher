@@ -3,8 +3,7 @@ import { Button, Card, Form } from "react-bootstrap";
 import { usePoke } from "./context/pokeContext";
 
 function Login() {
-  const { setOffset, setIsLogged } = usePoke();
-  const [trainerName, setTrainerName] = useState("");
+  const { setOffset, setIsLogged, trainerName, setTrainerName } = usePoke();
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -29,11 +28,6 @@ function Login() {
 
   return (
     <>
-      <img
-        src="/pokemon_logo.svg"
-        className="login-logo m-5"
-        alt="pokemon logo"
-      />
       <Card className="login col-md-9 col-12 p-4 justify-content-center align-items-center">
         <Card.Img
           variant="top"
