@@ -22,7 +22,7 @@ function MainPage() {
         <Card.Img
           variant="top"
           src="./ash.png"
-          className="ash d-none d-lg-block"
+          className="ash d-none d-md-block"
         />
         <Card.Body className="main-body text-center col-12">
           <Card.Title className="main-title">
