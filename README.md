@@ -1,6 +1,6 @@
 
 # PC-parts-calculator
-> BWeb app for new Pokémon Trainers, allowing them to catch their first Pokémon.
+> Web app for new Pokémon Trainers, allowing them to catch their first Pokémon.
 > App saves your data in browser LocalStorage, so you are safe to go away from planing :)
 > Live demo [_here_](https://pokemon-catcher-jacpolanski.vercel.app/)
 
